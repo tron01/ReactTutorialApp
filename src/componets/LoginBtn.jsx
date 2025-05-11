@@ -6,10 +6,8 @@ const LoginBtn = () => {
     }
 
     return (
-        <>
-            <button onClick={HandleClick} className="btn btn-primary text-center p-3 m-2"> Login Btn </button>
-        </>
+          <button onClick={HandleClick} className="btn btn-primary text-center p-3 m-2"> Login Btn </button>
     )
 }
 
-export default LoginBtn;
+export default LoginBtn
