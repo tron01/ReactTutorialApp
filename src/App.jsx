@@ -1,18 +1,25 @@
 import { useState } from 'react'
 import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css'; 
 import Card from './componets/Card';
-import RowContainer from './componets/RowsContainer';
+
+
 function App() {
+
+  const cardInfoList = [
+    { title: 'Card 1', description: 'This is card 1' },
+    { title: 'Card 2', description: 'This is card 2' },
+    { title: 'Card 3', description: 'This is card 3' },
+  ];
 
   return (
     <>
-      <h1 className='text-center bg-danger p-4'>l1</h1>
-      <Card text="Hai this my card Text " Title="Big card Title"></Card>
-      <Card text="Hai this my card Text " Title="Big card Title"></Card>
-      <RowContainer/>
+            <h1>Hello App Componet</h1>
+
+            {cardInfoList.map((c)=>
+            (<Card desc={c.description} title={c.title}  ></Card>
+            ))}
     </>
-  )
+  );
 }
 
 export default App

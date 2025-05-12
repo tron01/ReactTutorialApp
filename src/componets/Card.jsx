@@ -1,20 +1,12 @@
-import LoginBtn from "./LoginBtn";
-import CardTitle from "./CardTitle";
-import CardText from "./CardText";
+import React from 'react'
 
-const Card =({ text,Title })=>{
-    return (
-        <div class="card w-50 bg-dark text-white">
-        <div class="card-body">
-          
-          <CardTitle ctitle={Title}></CardTitle>
-          <CardText ctext={text}></CardText>
-          <LoginBtn/>
-         
-        </div>
-
-      </div>
-    )
+function Card({title,desc}) {
+  return (
+    <div>
+      <h1 className='p-2 bg-dark text-white m-2'> {title} </h1>
+      <p className='p-4'> {desc} </p>
+    </div>
+  )
 }
 
 export default Card
