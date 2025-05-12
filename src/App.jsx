@@ -17,8 +17,15 @@ function App() {
     const handleChange = (e) =>{
       console.log(e.target.value);
       setIsSelect(e.target.value)
-      setSelectedCaptial((Data[e.target.value]))
+    
     };
+  
+    const changeCaptial = () =>{
+      console.log("change captial called");
+      setSelectedCaptial((Data[isSelect]))
+    }
+
+    useEffect(changeCaptial,[isSelect])
     //console.log("selected:"+isSelect);
     
   return (
