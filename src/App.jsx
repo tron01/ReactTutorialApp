@@ -1,13 +1,10 @@
-import { useEffect, useState } from 'react'
-import './App.css'
-function App() {
+import Layout from './components/Layout';
+import Home from './pages/Home';
 
- 
-  return (
-    <>
-            <h1>Hello App Componet</h1> 
-    </>
-  );
-}
+const App = () => (
+  <Layout>
+    <Home />
+  </Layout>
+);
 
-export default App
+export default App;
