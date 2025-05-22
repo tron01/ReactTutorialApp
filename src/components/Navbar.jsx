@@ -9,7 +9,7 @@ const AppNavbar = () => {
     <Navbar expand="lg">
       <Container>
         <Navbar.Brand as={NavLink} to="/">MyApp</Navbar.Brand>
-        <Navbar.Toggle />
+        <Navbar.Toggle aria-controls="main-navbar" className={`border-0 toggle-icon-${theme}`}/>
         <Navbar.Collapse>
           <Nav className="ms-auto">
             <Nav.Link as={NavLink} to="/" end>Home</Nav.Link>
