@@ -1,10 +1,12 @@
-import { Container } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
 
-const Home = () => (
-  <Container>
-    <h1>Welcome to MyApp</h1>
-    <p>This is the homepage content styled with Bootstrap.</p>
-  </Container>
-);
-
+const Home = () => {
+  const theme = useSelector((state) => state.theme.value);
+  return (
+    <div className="text-center">
+      <h1>Welcome to MyApp</h1>
+      <p>Current theme: <strong>{theme}</strong></p>
+    </div>
+  );
+};
 export default Home;
